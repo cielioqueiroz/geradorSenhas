@@ -171,12 +171,12 @@ footer {
   color: white;
   text-align: center;
   padding: 0.5rem 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   width: 100%;
   bottom: 0;
-  margin-top: auto; /* Ensures footer is pushed to bottom */
+  margin-top: auto;
 }
 
 @media (max-width: 768px) {

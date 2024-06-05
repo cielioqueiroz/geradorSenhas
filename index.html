@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gerador de Senhas</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/assets/senha.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/assets/senha.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <div class="header-container">
-            <h1>Gerador de Senhas</h1>
-        </div>
+      <div class="header-container">
+        <h1>Gerador de Senhas</h1>
+      </div>
     </header>
     <main>
-        <div class="content-wrapper">
-            <div class="container">
-                <div class="input-group">
-                    <label for="password-length">Comprimento da Senha:</label>
-                    <input type="range" id="password-length" min="6" max="24" value="12" oninput="updateLengthValue(this.value)">
-                    <span id="length-value">12</span>
-                </div>
-                <div class="options-group">
-                    <label class="checkbox-container">
-                        Letras
-                        <input type="checkbox" id="include-letters" checked>
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="checkbox-container">
-                        Letras Maiúsculas
-                        <input type="checkbox" id="include-uppercase">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="checkbox-container">
-                        Números
-                        <input type="checkbox" id="include-numbers">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="checkbox-container">
-                        Símbolos
-                        <input type="checkbox" id="include-symbols">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <button id="generate-btn" class="btn">Gerar Senha</button>
-                <input type="text" id="password-output" readonly>
-                <button id="copy-btn" class="btn">Copiar Senha</button>
-            </div>
+      <div class="content-wrapper">
+        <div class="container">
+          <div class="input-group">
+            <label for="password-length">Comprimento da Senha:</label>
+            <input
+              type="range"
+              id="password-length"
+              min="6"
+              max="24"
+              value="12"
+              oninput="updateLengthValue(this.value)"
+            />
+            <span id="length-value">12</span>
+          </div>
+          <div class="options-group">
+            <label class="checkbox-container">
+              Letras
+              <input type="checkbox" id="include-letters" checked />
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">
+              Letras Maiúsculas
+              <input type="checkbox" id="include-uppercase" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">
+              Números
+              <input type="checkbox" id="include-numbers" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container">
+              Símbolos
+              <input type="checkbox" id="include-symbols" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <button id="generate-btn" class="btn">Gerar Senha</button>
+          <input type="text" id="password-output" readonly />
+          <button id="copy-btn" class="btn">Copiar Senha</button>
         </div>
+      </div>
     </main>
     <footer>
-        <p>&copy; 2024 Gerador de Senhas. Todos os direitos reservados.</p>
+      <p>
+        &copy; <span id="current-year"></span> Gerador de Senhas. Todos os
+        direitos reservados.
+      </p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
